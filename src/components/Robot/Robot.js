@@ -19,10 +19,12 @@ const RobotContainer = styled.div`
     height: 100%;
     width: 100%;
   }
-
   ul {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     padding-left: 0;
+    gap: 10px;
   }
 `;
 
@@ -34,7 +36,6 @@ const Robot = ({ name, image, resistance, velocity, id, date }) => {
       <img className="robot-image" src={image} alt="robot" />
       <h2>{name}</h2>
       <ul>
-        <li>ID: {id}</li>
         <li>Fecha de Creacion: {date}</li>
         <li>Resistencia: {resistance}</li>
         <li>Velocidad: {velocity}</li>
