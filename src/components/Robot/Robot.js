@@ -8,13 +8,13 @@ const RobotContainer = styled.div`
   flex-direction: column;
   width: 300px;
   height: 550px;
-  border: 3px solid yellow;
+  border: 3px solid #d9a406;
   border-radius: 15px;
   overflow: hidden;
   background-color: #343a40;
   align-items: center;
   padding-bottom: 10px;
-  color: yellow;
+  color: #d9a406;
   .robot-image {
     height: 100%;
     width: 100%;
