@@ -1,10 +1,16 @@
 import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
 import Robot from "./Robot";
+import store from "../../redux/store/store";
 
 describe("Given a Robot Component", () => {
   describe("When its instantiated", () => {
     test("then it should render an img", () => {
-      render(<Robot />);
+      render(
+        <Provider store={store}>
+          <Robot />
+        </Provider>
+      );
 
       const receivedElement = screen.getByRole("list");
 
@@ -14,7 +20,11 @@ describe("Given a Robot Component", () => {
   test("then it should render 3 li", () => {
     const expectedLength = 4;
 
-    render(<Robot />);
+    render(
+      <Provider store={store}>
+        <Robot />
+      </Provider>
+    );
 
     const receivedElement = screen.getAllByRole("listitem");
 
