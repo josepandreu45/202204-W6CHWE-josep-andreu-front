@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import RobotsList from "./components/RobotsList/RobotsList";
 import { loadRobotsThunk } from "./redux/thunks/thunks";
 
 function App() {
@@ -7,7 +8,12 @@ function App() {
   useEffect(() => {
     dispatch(loadRobotsThunk());
   }, [dispatch]);
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <h1>ROBOTS</h1>
+      <RobotsList />
+    </div>
+  );
 }
 
 export default App;

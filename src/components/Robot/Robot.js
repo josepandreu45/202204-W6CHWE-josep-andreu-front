@@ -8,9 +8,9 @@ const Robot = ({ name, image, resistance, velocity, id }) => {
       <img src={image} alt="robot" />
       <h2>{name}</h2>
       <ul>
-        <li>{id}</li>
-        <li>{resistance}</li>
-        <li>{velocity}</li>
+        <li>ID: {id}</li>
+        <li>Resistance: {resistance}</li>
+        <li>Velocity: {velocity}</li>
       </ul>
     </RobotContainer>
   );
