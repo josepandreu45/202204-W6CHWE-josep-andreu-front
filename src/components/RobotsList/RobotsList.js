@@ -24,6 +24,7 @@ const RobotsList = () => {
         return (
           <Robot
             key={robot.name}
+            date={robot.date}
             name={robot.name}
             image={robot.image}
             id={robot._id}

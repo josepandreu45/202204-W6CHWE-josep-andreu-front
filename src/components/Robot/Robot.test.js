@@ -12,7 +12,7 @@ describe("Given a Robot Component", () => {
     });
   });
   test("then it should render 3 li", () => {
-    const expectedLength = 3;
+    const expectedLength = 4;
 
     render(<Robot />);
 
