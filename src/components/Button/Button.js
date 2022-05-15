@@ -12,10 +12,10 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const Button = ({ text }) => {
+const Button = ({ text, action }) => {
   return (
     <ButtonContainer>
-      <button>
+      <button onClick={action}>
         <img src={text} alt="delete" />
       </button>
     </ButtonContainer>

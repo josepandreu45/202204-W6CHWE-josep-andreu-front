@@ -1,4 +1,6 @@
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import { deleteRobotThunk } from "../../redux/thunks/thunks";
 import Button from "../Button/Button";
 
 const RobotContainer = styled.div`
@@ -25,6 +27,8 @@ const RobotContainer = styled.div`
 `;
 
 const Robot = ({ name, image, resistance, velocity, id, date }) => {
+  const dispatch = useDispatch();
+
   return (
     <RobotContainer>
       <img className="robot-image" src={image} alt="robot" />
@@ -35,7 +39,10 @@ const Robot = ({ name, image, resistance, velocity, id, date }) => {
         <li>Resistencia: {resistance}</li>
         <li>Velocidad: {velocity}</li>
       </ul>
-      <Button text={"../../images/delete.png"} />
+      <Button
+        action={() => dispatch(deleteRobotThunk(id))}
+        text={"../../images/delete.png"}
+      />
     </RobotContainer>
   );
 };
