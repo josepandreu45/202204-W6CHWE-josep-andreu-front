@@ -5,7 +5,13 @@ import Robot from "../Robot/Robot";
 const RobotsListContainer = styled.div`
   margin: 15px;
   display: flex;
+  justify-content: space-between;
   gap: 50px;
+  @media (max-width: 1060px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const RobotsList = () => {
@@ -16,6 +22,7 @@ const RobotsList = () => {
       {robots.map((robot) => {
         return (
           <Robot
+            key={robot.name}
             name={robot.name}
             image={robot.image}
             id={robot._id}

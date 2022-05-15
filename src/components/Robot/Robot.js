@@ -5,17 +5,17 @@ const RobotContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 500px;
-  border: 3px solid black;
+  height: 550px;
+  border: 3px solid yellow;
   border-radius: 15px;
   overflow: hidden;
-  background-color: lightblue;
+  background-color: #343a40;
   align-items: center;
   padding-bottom: 10px;
+  color: yellow;
   .robot-image {
     height: 100%;
     width: 100%;
-    border-bottom: 3px solid black;
   }
 
   ul {
