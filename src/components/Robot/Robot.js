@@ -24,15 +24,16 @@ const RobotContainer = styled.div`
   }
 `;
 
-const Robot = ({ name, image, resistance, velocity, id }) => {
+const Robot = ({ name, image, resistance, velocity, id, date }) => {
   return (
     <RobotContainer>
       <img className="robot-image" src={image} alt="robot" />
       <h2>{name}</h2>
       <ul>
         <li>ID: {id}</li>
-        <li>Resistance: {resistance}</li>
-        <li>Velocity: {velocity}</li>
+        <li>Fecha de Creacion: {date}</li>
+        <li>Resistencia: {resistance}</li>
+        <li>Velocidad: {velocity}</li>
       </ul>
       <Button text={"../../images/delete.png"} />
     </RobotContainer>
