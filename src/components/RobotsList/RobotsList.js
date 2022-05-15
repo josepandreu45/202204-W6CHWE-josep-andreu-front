@@ -5,8 +5,9 @@ import Robot from "../Robot/Robot";
 const RobotsListContainer = styled.div`
   margin: 15px;
   display: flex;
-  justify-content: space-between;
-  gap: 50px;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
   @media (max-width: 1060px) {
     display: flex;
     flex-direction: column;
