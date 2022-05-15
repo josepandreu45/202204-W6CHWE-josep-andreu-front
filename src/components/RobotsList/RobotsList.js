@@ -8,7 +8,7 @@ const RobotsListContainer = styled.div`
   justify-content: space-around;
   gap: 40px;
   flex-wrap: wrap;
-  @media (max-width: 1060px) {
+  @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
     align-items: center;

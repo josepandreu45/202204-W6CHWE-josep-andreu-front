@@ -18,7 +18,7 @@ describe("Given a Robot Component", () => {
     });
   });
   test("then it should render 3 li", () => {
-    const expectedLength = 4;
+    const expectedLength = 3;
 
     render(
       <Provider store={store}>
