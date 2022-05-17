@@ -5,11 +5,15 @@ import {
 } from "../features/robotsSlice";
 
 export const loadRobotsThunk = () => async (dispatch) => {
-  const { data: robots } = await axios.get(process.env.REACT_APP_API_URL, {
-    headers: {
-      Authorization: `${process.env.REACT_APP_TOKEN}`,
-    },
-  });
+  const token = localStorage.getItem("token");
+  const { data: robots } = await axios.get(
+    `${process.env.REACT_APP_API_URL}/robots`,
+    {
+      headers: {
+        Authorization: `${token}`,
+      },
+    }
+  );
   dispatch(loadRobotsActionCreator(robots));
 };
 
