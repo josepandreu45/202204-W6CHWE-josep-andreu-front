@@ -4,7 +4,7 @@ import jwtDecode from "jwt-decode";
 
 const loginThunk = (userData) => async (dispatch) => {
   const { data } = await axios.post(
-    `${process.env.REACT_APP_URL}/users/login`,
+    `${process.env.REACT_APP_API_URL}/users/login`,
     userData
   );
 
