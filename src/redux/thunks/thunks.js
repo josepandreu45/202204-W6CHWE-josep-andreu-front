@@ -10,7 +10,7 @@ export const loadRobotsThunk = () => async (dispatch) => {
     `${process.env.REACT_APP_API_URL}/robots`,
     {
       headers: {
-        Authorization: `${token}`,
+        Authorization: `Bearer ${token}`,
       },
     }
   );
